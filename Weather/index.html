@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="init()">
+    <div class="container">
+        <div class="search">
+            <input type="text" name="search-city" id="search-city" placeholder="Buscar ciudad" onkeypress="run(event)">
+            <button  id="btnSearch" name="search" onclick="searchByCity()">Buscar</button>
+        </div>
+        <div id="error"></div>
+        <div id="weatherHub">
+            <div class="info">
+                <img id="weatherIcon" src="" alt="Weather">
+                <div id="description"></div>
+                <div id="description_2"></div>
+                <div id="location"></div>
+                <div id="date"></div>
+            </div>
+            <div class="weather_elm">
+                <div class="tempContainer">
+                    <p class="title">Temperatura</p>
+                    <img  class="image" src="images/thermometer.png" alt="thermometer">
+                    <div id="temperature"></div>
+                </div>
+                <div class="pressContainer">
+                    <p class="title">Presión</p>
+                    <img class="image" src="images/pressurethermometer.png" alt="pressurethermometer">
+                    <div id="pressure"></div>
+                </div>
+                <div class="humiContainer">
+                    <p class="title">Humedad</p>
+                    <img class="image" src="images/humidity.png" alt="humidity">
+                    <div id="humidity"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="load" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
